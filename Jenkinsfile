@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tools{
+    gradle 'Gradle-7.3'
+    }
     stages {
          stage('run frontend') {
             steps {
@@ -13,9 +16,9 @@ pipeline {
             steps {
                 echo 'executing gradle...'
                 nodejs('NodeJS17.1.0'){
-                    withGradle() {
+                    
                     sh './gradlew -v'
-                    }   
+                     
                 }
             }
         }
