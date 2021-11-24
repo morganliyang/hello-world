@@ -1,8 +1,10 @@
 pipeline {
     agent any
+    /*
     tools{
     gradle 'Gradle 7.3'
     }
+    */
     stages {
          stage('run frontend') {
             steps {
