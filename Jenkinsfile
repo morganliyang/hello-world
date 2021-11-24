@@ -38,6 +38,7 @@ pipeline {
                 echo 'deploying the application...'
             }
         }
+    }
         post{
             always{echo 'always...'}
             success{echo 'success...'}
@@ -45,5 +46,5 @@ pipeline {
         }
         
         
-    }
+    
 }
