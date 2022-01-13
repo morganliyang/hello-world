@@ -12,14 +12,14 @@ outputs:
 runs:
   using: "composite"
   steps:
-    #- run: echo Hello1 
-    #  shell: bash
-    #- id: random-number-generator
-    #  run: echo Hello2
-    #  shell: bash
-    - shell: bash
-        run: |
-          expr 1 + 1 > output.log
+    - run: echo Hello1 
+      shell: bash
+    - id: random-number-generator
+      run: echo Hello2
+      shell: bash
+    #- shell: bash
+        #run: |
+         # expr 1 + 1 > output.log
       #- name: Upload output file
       #  uses: actions/upload-artifact@v2
       #  with:
