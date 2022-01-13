@@ -1,12 +1,11 @@
-name: workflow-use-actions
-on: [push]
-jobs:
-  check-bats-version:
-    runs-on: ubuntu-latest
+name: Test workflow-use-actions
+description: 'composite run action'
+
+runs:
+  using: "composite"
+  steps: 
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-      - run: npm install -g bats
-      - run: bats -v
+    - name: Echo
+      shell: bash
+      run: |
+        echo Heyyyyy
